@@ -34,7 +34,7 @@ function App() {
 
   const formatBackground = () => {
     if (!weather) return 'from-cyan-700 to-blue-700';
-    const threshold = units === 'metric' ? 20 : 60;
+    const threshold = units === 'metric' ? 30 : 60;
     if (weather.temp <= threshold) return 'from-cyan-700 to-blue-700';
 
     return 'from-yellow-700 to-orange-700';
@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div
-      className={`mx-auto max-w-sm my-4 py-6 px-8 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()} rounded-lg `}
+      className={`mx-auto max-w-md my-4 py-6 px-8 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()} rounded-lg `}
     >
       <TopButtons setQuery={setQuery} />
       <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
