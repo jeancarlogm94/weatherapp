@@ -11,7 +11,7 @@ function TimeAndLocation({ weather: { dt, timezone, name, country } }) {
       </div>
 
       <div className="flex items-center justify-center">
-        <p className="text-white text-2xl font-medium">{`${name}, ${country}`}</p>
+        <p className="text-white text-3xl font-medium">{`${name}, ${country}`}</p>
       </div>
     </div>
   );
