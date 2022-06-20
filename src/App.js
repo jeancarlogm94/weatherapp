@@ -4,7 +4,9 @@ import Inputs from './components/Inputs';
 import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
-import getFormattedWeatherData from './services/weatherService';
+import getFormattedWeatherData, {
+  iconUrlFromCode,
+} from './services/weatherService';
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -51,10 +53,8 @@ function App() {
         <div className="flex flex-row items-center justify-center text-white">
           <p className="text-white text-center text-4xl font-medium">Weather</p>
           <p className="text-white text-center text-2xl font-medium">App</p>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            alt="Logo weather app"
-          />
+          <img src={iconUrlFromCode('02d')} alt="" />
+          {/* <img src={iconUrlFromCode('02n')} alt="" /> */}
         </div>
         <TopButtons setQuery={setQuery} />
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
