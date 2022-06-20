@@ -25,33 +25,16 @@ function TemperatureAndDetails({
 }) {
   return (
     <div>
+
       <div className="flex items-center justify-center py-3 text-2xl text-cyan-300">
         <p>{details}</p>
       </div>
-
-      <div className="flex flex-row items-center justify-between text-white">
-        <img src={iconUrlFromCode(icon)} alt="" className="w-30" />
+      <div className="flex flex-row items-center justify-center text-white">
         <p className="text-5xl">{`${temp.toFixed()}°`}</p>
-        <div className="flex flex-col space-y-1">
-          <div className="flex font-light text-sm items-center justify-center">
-            <UilTemperature size={18} className="mr-1" />
-            Real fell:
-            <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
-          </div>
-          <div className="flex font-light text-sm items-center justify-center">
-            <UilTear size={18} className="mr-1" />
-            Humidity:
-            <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>
-          </div>
-          <div className="flex font-light text-sm items-center justify-center">
-            <UilWind size={18} className="mr-1" />
-            Wind:
-            <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>
-          </div>
-        </div>
+        <img src={iconUrlFromCode(icon)} alt="" className="w-30" />
       </div>
-
-      <div className="flex flex-row items-center justify-center my-2 space-x-2 text-white text-md">
+      
+      <div className="flex flex-row items-center justify-center my-1 space-x-2 text-white text-md">
         <UilSun />
         <p className="text-center font-light">
           Rise {" "}
@@ -84,6 +67,25 @@ function TemperatureAndDetails({
           Low {" "}
           <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
         </p>
+      </div>
+
+      <div className="flex flex-row items-center justify-center mb-2 space-x-2 text-white text-md">
+      <UilTemperature size={18} className="mr-1" />
+            Real fell:
+            <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>    
+      <UilTear size={18} className="mr-1" />
+            Humidity:
+            <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>     
+      </div>
+
+      <div className="flex flex-row items-center justify-center mb-3 space-x-2 text-white text-md">
+         
+      </div>
+
+      <div className="flex flex-row items-center justify-center mb-3 space-x-2 text-white text-md">
+      <UilWind size={18} className="mr-1" />
+            Wind:
+            <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>      
       </div>
     </div>
   );

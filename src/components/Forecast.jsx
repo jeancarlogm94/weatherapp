@@ -8,7 +8,7 @@ function Forecast({ title, items }) {
       <div className="flex items-center justify-center mt-6">
         <p className="text-white font-medium uppercase">{title}</p>
       </div>
-      <hr className="my-2" />
+      <hr className="my-3" />
 
       <div className="flex flex-row items-center justify-between text-white">
         {items.map((item) => (
