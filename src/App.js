@@ -49,9 +49,8 @@ function App() {
         className={`mx-auto max-w-md my-4 py-1 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-400 rounded-lg`}
       >
         <div className="flex flex-row items-center justify-center text-white">
-          <p className="text-white text-center text-4xl font-medium">
-            Weather App
-          </p>
+          <p className="text-white text-center text-4xl font-medium">Weather</p>
+          <p className="text-white text-center text-2xl font-medium">App</p>
           <img
             src="http://openweathermap.org/img/wn/02d@2x.png"
             alt="Logo weather app"
