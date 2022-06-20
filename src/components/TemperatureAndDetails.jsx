@@ -51,12 +51,12 @@ function TemperatureAndDetails({
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center space-x-2 text-white text-sm">
+      <div className="flex flex-row items-center justify-center my-3 space-x-2 text-white text-sm">
         <UilSun />
         <p className="font-light">
           Rise:{" "}
           <span className="font-medium ml-1">
-            {formatToLocalTime(sunrise, timezone, "hh:mm a")}
+            {formatToLocalTime(sunrise, timezone, "hh:mma")}
           </span>
         </p>
         <p className="font-light">|</p>
@@ -65,7 +65,7 @@ function TemperatureAndDetails({
         <p className="font-light">
           Set:{" "}
           <span className="font-medium ml-1">
-            {formatToLocalTime(sunset, timezone, "hh:mm a")}
+            {formatToLocalTime(sunset, timezone, "hh:mma")}
           </span>
         </p>
         <p className="font-light">|</p>
