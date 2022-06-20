@@ -43,7 +43,7 @@ function App() {
   return (
     <div>
       <div
-        className={`mx-auto max-w-md my-4 pt-5 pb-1 px-8 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()} rounded-lg `}
+        className={`mx-auto max-w-md my-4 pt-5 pb-1 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-400 ${formatBackground()} rounded-lg`}
       >
         <TopButtons setQuery={setQuery} />
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
@@ -51,7 +51,7 @@ function App() {
 
       {weather && (
         <div
-          className={`mx-auto max-w-md my-4 py-6 px-8 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()} rounded-lg `}
+          className={`mx-auto max-w-md my-4 py-6 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-400 ${formatBackground()} rounded-lg`}
         >
           <TimeAndLocation weather={weather} />
           <TemperatureAndDetails weather={weather} />
