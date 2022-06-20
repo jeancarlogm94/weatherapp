@@ -43,7 +43,7 @@ function App() {
   return (
     <div>
       <div
-        className={`mx-auto max-w-md my-4 pt-5 pb-1 px-4 bg-gradient-to-br  h-fit shadow-md shadow-gray-400 ${formatBackground()} rounded-lg`}
+        className={`mx-auto max-w-md my-4 pt-5 pb-1 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-400 ${formatBackground()} rounded-lg`}
       >
         <TopButtons setQuery={setQuery} />
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
