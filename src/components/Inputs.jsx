@@ -38,7 +38,7 @@ function Inputs({ setQuery, units, setUnits }) {
           onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
           placeholder="enter city"
-          className="text-l text-center font-light p-2 focus:outline-none capitalize rounded-lg "
+          className="text-l text-center font-light p-2 w-full shadow-xl focus:outline-none capitalize rounded-lg "
         />
         <UilSearch
           size={25}
