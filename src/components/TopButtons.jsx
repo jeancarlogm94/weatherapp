@@ -8,11 +8,15 @@ function TopButtons({ setQuery }) {
     },
     {
       id: 2,
-      title: "Tokyo",
+      title: "London",
     },
     {
       id: 3,
       title: "Sydney",
+    },
+    {
+      id: 4,
+      title: "Tokyo",
     },
   ];
 
