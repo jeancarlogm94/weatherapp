@@ -51,35 +51,37 @@ function TemperatureAndDetails({
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center my-3 space-x-2 text-white text-sm">
+      <div className="flex flex-row items-center justify-center my-3 space-x-2 text-white text-md">
         <UilSun />
-        <p className="font-light">
-          Rise
+        <p className="text-center font-light">
+          Rise {" "}
           <span className="font-medium ml-1">
             {formatToLocalTime(sunrise, timezone, "hh:mma")}
           </span>
         </p>
-        <p className="font-light">|</p>
+        <p className="text-center font-light">|</p>
 
         <UilSunset />
-        <p className="font-light">
-          Set
+        <p className="text-center font-light">
+          Set {" "}
           <span className="font-medium ml-1">
             {formatToLocalTime(sunset, timezone, "hh:mma")}
           </span>
         </p>
-        <p className="font-light">|</p>
+        <p className="text-center font-light">|</p>
+      </div>
 
+      <div className="flex flex-row items-center justify-center my-3 space-x-2 text-white text-md">
         <UilSun />
-        <p className="font-light">
-          High
+        <p className="text-center font-light">
+          High {" "}
           <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
         </p>
-        <p className="font-light">|</p>
+        <p className="text-center font-light">|</p>
 
         <UilSun />
-        <p className="font-light">
-          Low
+        <p className="text-center font-light">
+          Low {" "}
           <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
         </p>
       </div>
