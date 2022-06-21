@@ -21,7 +21,7 @@ function TemperatureAndDetails({
     humidity,
     feels_like,
     timezone,
-  },
+  }, 
 }) {
   return (
     <div>

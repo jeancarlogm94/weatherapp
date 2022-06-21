@@ -5,6 +5,7 @@ import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
 import getFormattedWeatherData, {
+  formatToLocalTime,
   iconUrlFromCode,
 } from './services/weatherService';
 import { useEffect, useState } from 'react';
@@ -45,31 +46,32 @@ function App() {
     return 'from-yellow-600 to-orange-600';
   };
 
-  const formatBackgroundNav = () => {
-    const date = new Date();
-    const hour = date.getHours();
+  // const formatBackgroundNav = () => {
+  //   const date = new Date();
+  //   const hour = date.getHours();
 
-    if (date >= 0 && hour < 18) return 'from-cyan-500 to-blue-400';
-    else return 'from-cyan-600 to-blue-700';
-  };
+  //   if (date >= 0 && hour < 18) return 'from-cyan-500 to-blue-400';
+  //   else return 'from-cyan-600 to-blue-700';
+  // };
 
-  const formatLogodNav = () => {
-    const date = new Date();
-    const hour = date.getHours();
+  // const formatLogodNav = () => {
+  //   const date = new Date();
+  //   const hour = date.getHours();
 
-    if (date >= 0 && hour < 18) return '02d';
-    else return '02n';
-  };
+  //   if (date >= 0 && hour < 18) return '02d';
+  //   else return '02n';
+  // };
 
   return (
     <div>
       <div
-        className={`mx-auto max-w-md my-4 py-1 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-400  ${formatBackgroundNav()} rounded-lg`}
+        className={`mx-auto max-w-md my-4 py-1 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-400  rounded-lg`}
       >
         <div className="flex flex-row items-center justify-center text-white">
           <p className="text-white text-center text-4xl font-medium">Weather</p>
           <p className="text-white text-center text-2xl font-medium">App</p>
-          <img src={iconUrlFromCode(formatLogodNav())} alt="" />
+          {/* <img src={iconUrlFromCode(formatLogodNav())} alt="" /> */}
+          <img src={iconUrlFromCode('02d')} alt="" />
           {/* <img src={iconUrlFromCode('02n')} alt="" /> */}
         </div>
         <TopButtons setQuery={setQuery} />
