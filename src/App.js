@@ -31,7 +31,7 @@ function App() {
         );
 
         setWeather(data);
-        setLoading(true);
+        setLoading(false);
       });
     };
 
