@@ -31,7 +31,7 @@ function App() {
         );
 
         setWeather(data);
-        setLoading(false);
+        setLoading(true);
       });
     };
 
@@ -65,13 +65,18 @@ function App() {
   return (
     <div>
       <div
-        className={`mx-auto max-w-md my-4 py-1 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-400  rounded-lg`}
+        className={`mx-auto max-w-md my-3 pb-2 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-400  rounded-lg`}
       >
-        <div className="flex flex-row items-center justify-center text-white">
+        <div className="flex flex-row items-center justify-center text-white m-0">
           <p className="text-white text-center text-4xl font-medium">Weather</p>
           <p className="text-white text-center text-2xl font-medium">App</p>
           {/* <img src={iconUrlFromCode(formatLogodNav())} alt="" /> */}
-          <img src={iconUrlFromCode('02d')} alt="" />
+          {/* <img src={iconUrlFromCode('02d')} alt="" /> */}
+          <img
+            style={{ width: '100px', paddin: '' }}
+            src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/day.svg"
+            alt=""
+          />
           {/* <img src={iconUrlFromCode('02n')} alt="" /> */}
         </div>
         <TopButtons setQuery={setQuery} />
