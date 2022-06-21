@@ -5,7 +5,7 @@ import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
 import getFormattedWeatherData, {
-  formatToLocalTime,
+  // formatToLocalTime,
   iconUrlFromCode,
 } from './services/weatherService';
 import { useEffect, useState } from 'react';
