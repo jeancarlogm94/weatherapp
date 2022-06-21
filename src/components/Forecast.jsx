@@ -6,7 +6,7 @@ function Forecast({ title, items }) {
   return (
     <div>
       <div className="flex items-center justify-center mt-6">
-        <p className="text-white font-medium uppercase">{title}</p>
+        <p className="text-white font-medium text-xl capitalize">{title}</p>
       </div>
       <hr className="my-3" />
 
