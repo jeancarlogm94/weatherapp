@@ -4,10 +4,9 @@ import Inputs from './components/Inputs';
 import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
-import getFormattedWeatherData, {
-  // formatToLocalTime,
-  iconUrlFromCode,
-} from './services/weatherService';
+import getFormattedWeatherData from // formatToLocalTime,
+// iconUrlFromCode,
+'./services/weatherService';
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
