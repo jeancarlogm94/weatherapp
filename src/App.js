@@ -37,23 +37,39 @@ function App() {
     fetchWeather();
   }, [query, units]);
 
-  const formatBackground = () => {
+  const formatBackgroundCard = () => {
     if (!weather) return 'from-cyan-500 to-blue-400';
     const threshold = units === 'metric' ? 26 : 80;
     if (weather.temp <= threshold) return 'from-cyan-500 to-blue-400';
 
-    return 'from-yellow-500 to-orange-500';
+    return 'from-yellow-600 to-orange-600';
+  };
+
+  const formatBackgroundNav = () => {
+    const date = new Date();
+    const hour = date.getHours();
+
+    if (date >= 0 && hour < 18) return 'from-cyan-500 to-blue-400';
+    else return 'from-cyan-600 to-blue-700';
+  };
+
+  const formatLogodNav = () => {
+    const date = new Date();
+    const hour = date.getHours();
+
+    if (date >= 0 && hour < 18) return '02d';
+    else return '02n';
   };
 
   return (
     <div>
       <div
-        className={`mx-auto max-w-md my-4 py-1 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-400 rounded-lg`}
+        className={`mx-auto max-w-md my-4 py-1 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-400  ${formatBackgroundNav()} rounded-lg`}
       >
         <div className="flex flex-row items-center justify-center text-white">
           <p className="text-white text-center text-4xl font-medium">Weather</p>
           <p className="text-white text-center text-2xl font-medium">App</p>
-          <img src={iconUrlFromCode('02d')} alt="" />
+          <img src={iconUrlFromCode(formatLogodNav())} alt="" />
           {/* <img src={iconUrlFromCode('02n')} alt="" /> */}
         </div>
         <TopButtons setQuery={setQuery} />
@@ -65,7 +81,7 @@ function App() {
       ) : (
         weather && (
           <div
-            className={`mx-auto max-w-md my-4 py-6 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-400 ${formatBackground()} rounded-lg`}
+            className={`mx-auto max-w-md my-4 py-6 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-400 ${formatBackgroundCard()} rounded-lg`}
           >
             <TimeAndLocation weather={weather} />
             <TemperatureAndDetails weather={weather} />
