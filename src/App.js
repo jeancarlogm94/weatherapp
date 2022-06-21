@@ -67,7 +67,7 @@ function App() {
       <div
         className={`mx-auto max-w-md my-3 pb-2 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-400  rounded-lg`}
       >
-        <div className="flex flex-row items-center justify-center text-white m-0">
+        <div className="flex flex-row items-center justify-center text-white">
           <p className="text-white text-center text-4xl font-medium">Weather</p>
           <p className="text-white text-center text-2xl font-medium">App</p>
           {/* <img src={iconUrlFromCode(formatLogodNav())} alt="" /> */}
