@@ -4,13 +4,13 @@ import Inputs from './components/Inputs';
 import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
-import getFormattedWeatherData from // formatToLocalTime,
-// iconUrlFromCode,
-'./services/weatherService';
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from './components/Loading';
+import getFormattedWeatherData, {
+  iconUrlFromCode,
+} from './services/weatherService';
 
 function App() {
   const [query, setQuery] = useState({ q: 'bogota' });
@@ -64,18 +64,18 @@ function App() {
   return (
     <div>
       <div
-        className={`mx-auto max-w-md my-3 pb-2 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-400  rounded-lg`}
+        className={`mx-auto max-w-md my-3 pb-2 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-300  rounded-lg`}
       >
         <div className="flex flex-row items-center justify-center text-white">
           <p className="text-white text-center text-4xl font-medium">Weather</p>
           <p className="text-white text-center text-2xl font-medium">App</p>
           {/* <img src={iconUrlFromCode(formatLogodNav())} alt="" /> */}
-          {/* <img src={iconUrlFromCode('02d')} alt="" /> */}
-          <img
+          <img src={iconUrlFromCode('02d')} alt="" />
+          {/* <img
             style={{ width: '100px', paddin: '' }}
             src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/day.svg"
             alt=""
-          />
+          /> */}
           {/* <img src={iconUrlFromCode('02n')} alt="" /> */}
         </div>
         <TopButtons setQuery={setQuery} />
@@ -87,7 +87,7 @@ function App() {
       ) : (
         weather && (
           <div
-            className={`mx-auto max-w-md my-4 py-6 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-400 ${formatBackgroundCard()} rounded-lg`}
+            className={`mx-auto max-w-md my-4 py-6 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
           >
             <TimeAndLocation weather={weather} />
             <TemperatureAndDetails weather={weather} />
