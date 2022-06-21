@@ -43,7 +43,7 @@ function App() {
     const threshold = units === 'metric' ? 26 : 80;
     if (weather.temp <= threshold) return 'from-cyan-500 to-blue-400';
 
-    return 'from-yellow-600 to-orange-600';
+    return 'from-yellow-500 to-orange-500';
   };
 
   // const formatBackgroundNav = () => {
