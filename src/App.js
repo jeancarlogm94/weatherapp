@@ -20,15 +20,14 @@ function App() {
 
   useEffect(() => {
     const fetchWeather = async () => {
-      const message = query.q ? query.q : 'current location.';
+      // const message = query.q ? query.q : 'current location.';
+      // toast.info('Fetching weather for ' + message);
+
       setLoading(true);
-      toast.info('Fetching weather for ' + message);
-
       await getFormattedWeatherData({ ...query, units }).then((data) => {
-        toast.success(
-          `Successfully fetched weather for ${data.name}, ${data.country}.`
-        );
-
+        // toast.success(
+        //   `Successfully fetched weather for ${data.name}, ${data.country}.`
+        // );
         setWeather(data);
         setLoading(false);
       });
