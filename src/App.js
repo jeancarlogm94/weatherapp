@@ -5,7 +5,7 @@ import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
 import { useEffect, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from './components/Loading';
 import getFormattedWeatherData, {
@@ -97,7 +97,7 @@ function App() {
         )
       )}
 
-      <ToastContainer autoClose={1000} theme="colored" newestOnTop={true} />
+      {/* <ToastContainer autoClose={1000} theme="colored" newestOnTop={true} /> */}
     </div>
   );
 }
