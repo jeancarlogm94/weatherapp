@@ -44,7 +44,6 @@ function TemperatureAndDetails({
         </p>
         <p className="text-center font-light">|</p>
 
-        <UilSunset />
         <p className="text-center font-light">
           Set {" "}
           <span className="font-medium ml-1">
@@ -52,6 +51,7 @@ function TemperatureAndDetails({
           </span>
         </p>
         <p className="text-center font-light"></p>
+        <UilSunset />
       </div>
 
       <div className="flex flex-row items-center justify-center my-4 space-x-2 text-white text-md">
@@ -62,20 +62,23 @@ function TemperatureAndDetails({
         </p>
         <p className="text-center font-light">|</p>
 
-        <UilTemperature size={18} className="mr-1" />
         <p className="text-center font-light">
           Low {" "}
           <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
         </p>
+        <UilTemperature size={18} className="mr-1" />
       </div>
 
       <div className="flex flex-row items-center justify-center space-x-2 text-white text-md">
       <UilTemperature size={18} className="mr-1" />
-            Real fell:
-            <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>    
-      <UilTear size={18} className="mr-1" />
-            Humidity:
+            Real fell 
+            <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span> 
+            <p className="text-center font-light">|</p>
+            
+            <p className="text-center font-light"></p>   
+            Humidity
             <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>     
+      <UilTear size={18} className="mr-1" />
       </div>
 
       <div className="flex flex-row items-center justify-center mb-2 space-x-2 text-white text-md">
@@ -84,8 +87,9 @@ function TemperatureAndDetails({
 
       <div className="flex flex-row items-center justify-center mb-2 space-x-2 text-white text-md">
       <UilWind size={18} className="mr-1" />
-            Wind:
-            <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>      
+            Wind
+            <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span> 
+      <UilWind size={18} className="mr-1" />
       </div>
     </div>
   );
