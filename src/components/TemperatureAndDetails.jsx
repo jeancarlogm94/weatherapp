@@ -55,14 +55,14 @@ function TemperatureAndDetails({
       </div>
 
       <div className="flex flex-row items-center justify-center my-4 space-x-2 text-white text-md">
-        <UilSun />
+      <UilTemperature size={18} className="mr-1" />
         <p className="text-center font-light">
           High {" "}
           <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
         </p>
         <p className="text-center font-light">|</p>
 
-        <UilSun />
+        <UilTemperature size={18} className="mr-1" />
         <p className="text-center font-light">
           Low {" "}
           <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
