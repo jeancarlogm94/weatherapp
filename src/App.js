@@ -5,34 +5,31 @@ import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
 import { useEffect, useState } from 'react';
-// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from './components/Loading';
 import getFormattedWeatherData, {
   iconUrlFromCode,
 } from './services/weatherService';
+// import CityNotFound from './components/CityNotFound';
 
 function App() {
   const [query, setQuery] = useState({ q: 'bogota' });
   const [units, setUnits] = useState('metric');
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchWeather = async () => {
-      // const message = query.q ? query.q : 'current location.';
-      // toast.info('Fetching weather for ' + message);
-
       setLoading(true);
       await getFormattedWeatherData({ ...query, units }).then((data) => {
-        // toast.success(
-        //   `Successfully fetched weather for ${data.name}, ${data.country}.`
-        // );
         setWeather(data);
         setLoading(false);
       });
+      //   .catch((error) => error.response);
+      // setLoading(false);
+      // setError(true);
     };
-
     fetchWeather();
   }, [query, units]);
 
@@ -68,14 +65,7 @@ function App() {
         <div className="flex flex-row items-center justify-center text-white">
           <p className="text-white text-center text-4xl font-medium">Weather</p>
           <p className="text-white text-center text-2xl font-medium">App</p>
-          {/* <img src={iconUrlFromCode(formatLogodNav())} alt="" /> */}
           <img src={iconUrlFromCode('02d')} alt="" />
-          {/* <img
-            style={{ width: '100px', paddin: '' }}
-            src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/day.svg"
-            alt=""
-          /> */}
-          {/* <img src={iconUrlFromCode('02n')} alt="" /> */}
         </div>
         <TopButtons setQuery={setQuery} />
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
@@ -96,7 +86,6 @@ function App() {
           </div>
         )
       )}
-
       {/* <ToastContainer autoClose={1000} theme="colored" newestOnTop={true} /> */}
     </div>
   );
