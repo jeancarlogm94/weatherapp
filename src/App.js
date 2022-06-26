@@ -10,14 +10,12 @@ import Loading from './components/Loading';
 import getFormattedWeatherData, {
   iconUrlFromCode,
 } from './services/weatherService';
-// import CityNotFound from './components/CityNotFound';
 
 function App() {
   const [query, setQuery] = useState({ q: 'bogota' });
   const [units, setUnits] = useState('metric');
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
-  // const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -26,9 +24,7 @@ function App() {
         setWeather(data);
         setLoading(false);
       });
-      //   .catch((error) => error.response);
-      // setLoading(false);
-      // setError(true);
+      setLoading(false);
     };
     fetchWeather();
   }, [query, units]);
@@ -37,25 +33,8 @@ function App() {
     if (!weather) return 'from-cyan-500 to-blue-400';
     const threshold = units === 'metric' ? 26 : 80;
     if (weather.temp <= threshold) return 'from-cyan-500 to-blue-400';
-
     return 'from-yellow-500 to-orange-500';
   };
-
-  // const formatBackgroundNav = () => {
-  //   const date = new Date();
-  //   const hour = date.getHours();
-
-  //   if (date >= 0 && hour < 18) return 'from-cyan-500 to-blue-400';
-  //   else return 'from-cyan-600 to-blue-700';
-  // };
-
-  // const formatLogodNav = () => {
-  //   const date = new Date();
-  //   const hour = date.getHours();
-
-  //   if (date >= 0 && hour < 18) return '02d';
-  //   else return '02n';
-  // };
 
   return (
     <div>
@@ -86,7 +65,6 @@ function App() {
           </div>
         )
       )}
-      {/* <ToastContainer autoClose={1000} theme="colored" newestOnTop={true} /> */}
     </div>
   );
 }
