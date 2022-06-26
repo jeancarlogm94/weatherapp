@@ -26,7 +26,7 @@ function TemperatureAndDetails({
   return (
     <div>
 
-      <div className="flex items-center justify-center mt-4 text-2xl text-cyan-300">
+      <div className="flex items-center justify-center mt-4 text-2xl text-white">
         <p>{details}</p>
       </div>
       <div className="flex flex-row items-center justify-center text-white">

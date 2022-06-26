@@ -10,6 +10,7 @@ import Loading from './components/Loading';
 import getFormattedWeatherData, {
   iconUrlFromCode,
 } from './services/weatherService';
+// import CityNotFound from './components/CityNotFound';
 
 function App() {
   const [query, setQuery] = useState({ q: 'bogota' });
@@ -24,7 +25,6 @@ function App() {
         setWeather(data);
         setLoading(false);
       });
-      setLoading(false);
     };
     fetchWeather();
   }, [query, units]);
