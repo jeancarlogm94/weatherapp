@@ -11,6 +11,7 @@ import getFormattedWeatherData, {
   iconUrlFromCode,
 } from './services/weatherService';
 // import CityNotFound from './components/CityNotFound';
+import swal from 'sweetalert';
 
 function App() {
   const [query, setQuery] = useState({ q: 'bogota' });
@@ -21,10 +22,19 @@ function App() {
   useEffect(() => {
     const fetchWeather = async () => {
       setLoading(true);
-      await getFormattedWeatherData({ ...query, units }).then((data) => {
-        setWeather(data);
-        setLoading(false);
-      });
+      await getFormattedWeatherData({ ...query, units })
+        .then((data) => {
+          setWeather(data);
+          setLoading(false);
+        })
+        .catch((error) =>
+          swal({
+            title: "¡We're sorry!",
+            text: 'No search results found',
+            button: 'Try again',
+          })
+        );
+      setLoading(false);
     };
     fetchWeather();
   }, [query, units]);
