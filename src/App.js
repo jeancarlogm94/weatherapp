@@ -29,8 +29,8 @@ function App() {
         })
         .catch((error) =>
           swal({
-            title: "¡We're sorry!",
-            text: 'No search results found',
+            title: '¡Sorry!',
+            text: 'No results found',
             button: 'Try again',
           })
         );
