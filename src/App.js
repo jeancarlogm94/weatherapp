@@ -30,6 +30,7 @@ function App() {
         .catch((error) =>
           swal({
             title: '¡Sorry!',
+            icon: 'error',
             text: 'No results found',
             button: 'Try again',
           })
