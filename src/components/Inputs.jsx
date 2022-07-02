@@ -34,7 +34,7 @@ function Inputs({ setQuery, units, setUnits }) {
     <div className="flex flex-row justify-center my-6">
       <div className="flex flex-row w-3/4 items-center justify-center space-x-3">
         <input
-        style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)' }}
+      
           value={city}
           onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
