@@ -33,11 +33,11 @@ function TemperatureAndDetails({
         <img src={iconUrlFromCode(icon)} alt="" className="w-20" />
       </div>
 
-      <div className="flex flex-row justify-center space-x-3 text-white text-md">
+      <div className="flex flex-row text-xl justify-center space-x-3 text-white text-md">
         <UilSun />
         <p className="text-center font-light">
           Rise
-          <span className="font-medium ml-1">
+          <span className="font-medium  ml-1">
             {formatToLocalTime(sunrise, timezone, 'hh:mma')}
           </span>
         </p>
@@ -68,18 +68,17 @@ function TemperatureAndDetails({
         <UilTemperature size={18} className="mr-1" />
       </div> */}
 
-      <div className="flex flex-row items-center justify-center mb-3 space-x-3 text-white text-md">
+      <div className="flex flex-row text-xl items-center justify-center mb-3 space-x-3 text-white text-md">
         <UilTemperature size={18} className="mr-1" />
         Real fell
         <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
-        <p className="text-center font-light"></p>
         <p className="text-center font-light"></p>
         Humidity
         <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>
         <UilTear size={18} className="mr-1" />
       </div>
 
-      <div className="flex flex-row items-center justify-center space-x-3 text-white text-md">
+      <div className="flex text-xl flex-row items-center justify-center space-x-3 text-white text-md">
         <UilWind size={18} className="mr-1" />
         Wind
         <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>
