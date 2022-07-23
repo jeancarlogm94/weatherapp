@@ -34,11 +34,15 @@ function Inputs({ setQuery, units, setUnits }) {
     <div className="flex flex-row justify-center my-6">
       <div className="flex flex-row w-3/4 items-center justify-center space-x-3">
         <input
+          style={{
+            color: 'white',
+            backgroundColor: 'rgba(255, 255, 255, 0.4)',
+          }}
           value={city}
           onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
           placeholder="enter city"
-          className="text-l text-center font-light p-2 w-full shadow-l focus:outline-none capitalize rounded-lg "
+          className="input text-2xl text-center font-medium p-2 w-full shadow-l focus:outline-none capitalize rounded-lg "
         />
         <UilSearch
           size={25}
