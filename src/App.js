@@ -82,7 +82,7 @@ function App() {
       <Row className="justify-content-md-center">
         <Col md={8}>
           <div
-            className={`mx-auto text-center my-3 pb-2 px-2 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-300  rounded-lg`}
+            className={`mx-auto text-center mt-3 mb-2 pb-2 px-2 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-300  rounded-lg`}
           >
             <div className="flex flex-row items-center justify-center text-white">
               <p className="text-white text-center text-4xl font-medium">
