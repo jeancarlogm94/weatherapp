@@ -16,7 +16,11 @@ function Forecast({ title, items }) {
             className="flex flex-col items-center justify-center"
           >
             <p className="font-light">{item.title}</p>
-            <img src={iconUrlFromCode(item.icon)} className="my-1" alt="" />
+            <img
+              src={iconUrlFromCode(item.icon)}
+              className="w-20 my-1"
+              alt=""
+            />
             <p className="font-medium text-xl">{`${item.temp.toFixed()}°`}</p>
           </div>
         ))}

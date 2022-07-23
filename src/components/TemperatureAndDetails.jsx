@@ -30,14 +30,14 @@ function TemperatureAndDetails({
       </div>
       <div className="flex flex-row items-center justify-center text-white">
         <p className="text-5xl">{`${temp.toFixed()}°`}</p>
-        <img src={iconUrlFromCode(icon)} alt="" className="w-20" />
+        <img src={iconUrlFromCode(icon)} alt="" className="w-30" />
       </div>
 
-      <div className="flex flex-row text-xl justify-center space-x-3 text-white text-md">
+      <div className="flex flex-row text-xl justify-center space-x-2 text-white text-md">
         <UilSun />
         <p className="text-center font-light">
           Rise
-          <span className="font-medium  ml-1">
+          <span className="font-medium  ml-2">
             {formatToLocalTime(sunrise, timezone, 'hh:mma')}
           </span>
         </p>
@@ -45,7 +45,7 @@ function TemperatureAndDetails({
 
         <p className="text-center font-light">
           Set
-          <span className="font-medium ml-1">
+          <span className="font-medium ml-2">
             {formatToLocalTime(sunset, timezone, 'hh:mma')}
           </span>
         </p>
