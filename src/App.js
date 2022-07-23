@@ -42,8 +42,6 @@ function App() {
     fetchWeather();
   }, [query, units]);
 
-  console.log(weather.lat);
-
   const formatBackgroundCard = () => {
     if (!weather) return 'from-cyan-500 to-blue-400';
     const threshold = units === 'metric' ? 26 : 80;
