@@ -28,7 +28,7 @@ function TopButtons({ setQuery }) {
   return (
     <div>
       <Row className="d-flex justify-content-center">
-        <Col md={8}>
+        <Col md={10}>
           <div className="d-flex justify-content-center">
             {cities.map((city) => (
               <button
