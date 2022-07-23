@@ -54,7 +54,7 @@ function Inputs({ setQuery, units, setUnits }) {
       <div className="flex flex-row items-center justify-center mx-2">
         <button
           name="metric"
-          className="text-xl mx-1 text-white font-light transition ease-out hover:scale-125"
+          className="text-2xl mx-1 text-white font-light transition ease-out hover:scale-125"
           onClick={handleUnitsChange}
         >
           °C
@@ -62,7 +62,7 @@ function Inputs({ setQuery, units, setUnits }) {
         {/* <p className="text-xl text-white mx-2">|</p> */}
         <button
           name="imperial"
-          className="text-xl mx-1 text-white font-light transition ease-out hover:scale-125"
+          className="text-2xl mx-1 text-white font-light transition ease-out hover:scale-125"
           onClick={handleUnitsChange}
         >
           °F
