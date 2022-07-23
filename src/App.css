@@ -1,8 +1,8 @@
 body {
   background-image: url('https://wallpapersmug.com/download/3840x2400/2e0a0c/clouds-and-sunset-sea-of-clouds.jpg');
-  height: 100%;
   background-size: cover;
   width: 100%;
+  height: 100%;
 }
 
 .App {
@@ -51,10 +51,9 @@ body {
 /* Spinner */
 
 .loading {
-  height: 200px;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .lds-dual-ring {
