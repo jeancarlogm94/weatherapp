@@ -51,34 +51,6 @@ function App() {
 
   return (
     <div className="mx-aut">
-      {/* <div
-        className={`mx-auto max-w-md my-3 pb-2 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-300  rounded-lg`}
-      >
-        <div className="flex flex-row items-center justify-center text-white">
-          <p className="text-white text-center text-4xl font-medium">Weather</p>
-          <p className="text-white text-center text-2xl font-medium">App</p>
-          <img src={iconUrlFromCode('02d')} alt="" />
-        </div>
-        <TopButtons setQuery={setQuery} />
-        <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
-      </div> */}
-
-      {/* {loading ? (
-        <Loading />
-      ) : (
-        weather && (
-          <div
-            className={`mx-auto max-w-md my-4 py-6 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
-          >
-            <TimeAndLocation weather={weather} />
-            <TemperatureAndDetails weather={weather} />
-
-            <Forecast title="hourly forecast" items={weather.hourly} />
-            <Forecast title="daily forecast" items={weather.daily} />
-          </div>
-        )
-      )} */}
-
       <Row className="justify-content-md-center">
         <Col md={8}>
           <div
@@ -109,6 +81,8 @@ function App() {
                       className={`my-2 py-4 bg-gradient-to-br shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
                     >
                       <TimeAndLocation weather={weather} />
+
+                      <TemperatureAndDetails weather={weather} />
                       <div>
                         <iframe
                           className="mx-auto my-3 rounded"
@@ -127,14 +101,13 @@ function App() {
                           referrerpolicy="no-referrer-when-downgrade"
                         ></iframe>
                       </div>
-                      <TemperatureAndDetails weather={weather} />
                     </div>
                   </div>
                 </Col>
                 <Col md={4}>
                   <div>
                     <div
-                      className={`my-2 py-1 px-3 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
+                      className={`my-2 py-1 px-5 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
                     >
                       <Forecast
                         title="hourly forecast"
