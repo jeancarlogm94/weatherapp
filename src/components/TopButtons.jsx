@@ -25,7 +25,7 @@ function TopButtons({ setQuery }) {
   ];
 
   return (
-    <div className="d-flex justify-content-center mx-5">
+    <div className="d-flex justify-content-center">
       {cities.map((city) => (
         <button
   
