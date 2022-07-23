@@ -85,7 +85,7 @@ function App() {
                       <TemperatureAndDetails weather={weather} />
                       <div>
                         <iframe
-                          className="mx-auto my-3 rounded"
+                          className="mx-auto mt-3 rounded"
                           title="map"
                           src={`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15905.208849639464!2d${weather.lon}!3d${weather.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1658597844873!5m2!1ses!2sco`}
                           width="600"
