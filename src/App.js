@@ -139,7 +139,7 @@ function App() {
             ) : (
               weather && (
                 <div
-                  className={`my-2 py-1 px-5 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
+                  className={`my-2 py-1 px-3 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
                 >
                   <Forecast title="hourly forecast" items={weather.hourly} />
                   <Forecast title="daily forecast" items={weather.daily} />

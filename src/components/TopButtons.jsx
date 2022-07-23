@@ -18,10 +18,6 @@ function TopButtons({ setQuery }) {
       id: 4,
       title: "Tokyo",
     },
-    {
-      id: 5,
-      title: "Toronto",
-    },
   ];
 
   return (
