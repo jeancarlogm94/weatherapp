@@ -11,12 +11,20 @@ function TopButtons({ setQuery }) {
       title: "London",
     },
     {
+      id: 2,
+      title: "New York",
+    },
+    {
       id: 3,
       title: "Sydney",
     },
     {
       id: 4,
       title: "Tokyo",
+    },
+    {
+      id: 5,
+      title: "Toronto",
     },
   ];
 
