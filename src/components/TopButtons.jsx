@@ -18,11 +18,14 @@ function TopButtons({ setQuery }) {
       id: 4,
       title: "Tokyo",
     },
- 
+    {
+      id: 5,
+      title: "Canada",
+    },
   ];
 
   return (
-    <div className="d-flex justify-content-center mx-5">
+    <div className="d-flex justify-content-center">
       {cities.map((city) => (
         <button
   
