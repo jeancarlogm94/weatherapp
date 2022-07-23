@@ -46,7 +46,7 @@ function App() {
     if (!weather) return 'from-cyan-500 to-blue-400';
     const threshold = units === 'metric' ? 26 : 80;
     if (weather.temp <= threshold) return 'from-cyan-500 to-blue-400';
-    return 'from-yellow-500 to-orange-400';
+    return 'from-yellow-500 to-orange-500';
   };
 
   return (
@@ -54,7 +54,7 @@ function App() {
       <Row className="justify-content-md-center">
         <Col md={8}>
           <div
-            className={`mx-auto text-center mt-3 mb-2 pb-2 px-2 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-300  rounded-lg`}
+            className={`mx-auto text-center mt-3 mb-2 pb-2 px-2 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit  rounded-lg`}
           >
             <div className="flex flex-row items-center justify-center text-white">
               <p className="text-white text-center text-4xl font-medium">
@@ -78,7 +78,7 @@ function App() {
                 <Col md={4}>
                   <div>
                     <div
-                      className={`my-2 py-4 bg-gradient-to-br shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
+                      className={`my-2 py-4 bg-gradient-to-br ${formatBackgroundCard()} rounded-lg`}
                     >
                       <TimeAndLocation weather={weather} />
 
@@ -107,7 +107,7 @@ function App() {
                 <Col md={4}>
                   <div>
                     <div
-                      className={`my-2 py-1 px-4 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
+                      className={`my-2 py-1 px-4 bg-gradient-to-br  h-fit ${formatBackgroundCard()} rounded-lg`}
                     >
                       <div className="flex items-center mt-3 justify-center">
                         <p className="text-white text-4xl font-medium">
