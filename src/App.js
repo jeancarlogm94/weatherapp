@@ -107,7 +107,7 @@ function App() {
                 <Col md={4}>
                   <div>
                     <div
-                      className={`my-2 py-1 px-5 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
+                      className={`my-2 py-1 px-4 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
                     >
                       <div className="flex items-center mt-3 justify-center">
                         <p className="text-white text-4xl font-medium">
