@@ -47,7 +47,7 @@ body {
 /* Spinner */
 
 .loading {
-  height: 100vh;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
