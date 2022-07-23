@@ -32,7 +32,7 @@ function Inputs({ setQuery, units, setUnits }) {
 
   return (
     <div className="flex flex-row justify-center my-6">
-      <div className="flex flex-row w-3/4 items-center justify-center space-x-3">
+      <div className="flex flex-row w-1/2 items-center justify-center space-x-3">
         <input
           value={city}
           onChange={(e) => setCity(e.currentTarget.value)}
@@ -60,7 +60,7 @@ function Inputs({ setQuery, units, setUnits }) {
         >
           °C
         </button>
-        <p className="text-xl text-white mx-1">|</p>
+        <p className="text-xl text-white mx-2">|</p>
         <button
           name="imperial"
           className="text-xl text-white font-light transition ease-out hover:scale-125"

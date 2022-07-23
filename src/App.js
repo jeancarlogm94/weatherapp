@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import TopButtons from './components/TopButtons';
 import Inputs from './components/Inputs';
 import TimeAndLocation from './components/TimeAndLocation';
@@ -12,6 +13,7 @@ import getFormattedWeatherData, {
 } from './services/weatherService';
 // import CityNotFound from './components/CityNotFound';
 import swal from 'sweetalert';
+import { Row, Col } from 'react-bootstrap';
 
 function App() {
   const [query, setQuery] = useState({ q: 'bogota' });
@@ -40,6 +42,8 @@ function App() {
     fetchWeather();
   }, [query, units]);
 
+  console.log(weather.lat);
+
   const formatBackgroundCard = () => {
     if (!weather) return 'from-cyan-500 to-blue-400';
     const threshold = units === 'metric' ? 26 : 80;
@@ -49,7 +53,7 @@ function App() {
 
   return (
     <div>
-      <div
+      {/* <div
         className={`mx-auto max-w-md my-3 pb-2 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-300  rounded-lg`}
       >
         <div className="flex flex-row items-center justify-center text-white">
@@ -59,9 +63,9 @@ function App() {
         </div>
         <TopButtons setQuery={setQuery} />
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
-      </div>
+      </div> */}
 
-      {loading ? (
+      {/* {loading ? (
         <Loading />
       ) : (
         weather && (
@@ -75,7 +79,78 @@ function App() {
             <Forecast title="daily forecast" items={weather.daily} />
           </div>
         )
-      )}
+      )} */}
+
+      <Row className="justify-content-md-center mx-4">
+        <Col md={8}>
+          <div
+            className={`mx-auto text-center my-3 pb-2 px-5 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-300  rounded-lg`}
+          >
+            <div className="flex flex-row items-center justify-center text-white">
+              <p className="text-white text-center text-4xl font-medium">
+                Weather
+              </p>
+              <p className="text-white text-center text-2xl font-medium">App</p>
+              <img src={iconUrlFromCode('02d')} alt="" />
+            </div>
+            <TopButtons setQuery={setQuery} />
+            <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
+          </div>
+        </Col>
+      </Row>
+
+      <Row className="justify-content-md-center mx-4">
+        <Col md={4}>
+          <div>
+            {loading ? (
+              <Loading />
+            ) : (
+              weather && (
+                <div
+                  className={`my-2 py-4 bg-gradient-to-br shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
+                >
+                  <TimeAndLocation weather={weather} />
+                  <div>
+                    <iframe
+                      className="mx-auto my-3 rounded"
+                      title="map"
+                      src={`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15905.208849639464!2d${weather.lon}!3d${weather.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1658597844873!5m2!1ses!2sco`}
+                      width="600"
+                      height="450"
+                      style={{
+                        border: 0,
+                        width: 'auto',
+                        maxWidth: '250px',
+                        maxHeight: '250px',
+                      }}
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                  <TemperatureAndDetails weather={weather} />
+                </div>
+              )
+            )}
+          </div>
+        </Col>
+        <Col md={4}>
+          <div>
+            {loading ? (
+              <Loading />
+            ) : (
+              weather && (
+                <div
+                  className={`my-2 py-1 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
+                >
+                  <Forecast title="hourly forecast" items={weather.hourly} />
+                  <Forecast title="daily forecast" items={weather.daily} />
+                </div>
+              )
+            )}
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 }

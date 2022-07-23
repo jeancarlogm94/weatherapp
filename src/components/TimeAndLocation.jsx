@@ -4,7 +4,7 @@ import { formatToLocalTime } from "../services/weatherService";
 function TimeAndLocation({ weather: { dt, timezone, name, country } }) {
   return (
     <div>
-      <div className="flex items-center justify-center my-3">
+      <div className="flex items-center justify-center ">
         <p className="text-white text-center text-xl font-extralight">
           {formatToLocalTime(dt, timezone)}
         </p>

@@ -22,11 +22,13 @@ function TemperatureAndDetails({
     feels_like,
     timezone,
   }, 
-}) {
+}) 
+
+{
   return (
     <div>
 
-      <div className="flex items-center justify-center mt-4 text-2xl text-white">
+      <div className="flex items-center justify-center  text-2xl text-white">
         <p>{details}</p>
       </div>
       <div className="flex flex-row items-center justify-center text-white">
@@ -34,7 +36,7 @@ function TemperatureAndDetails({
         <img src={iconUrlFromCode(icon)} alt="" className="w-20" />
       </div>
       
-      <div className="flex flex-row items-center justify-center my-1 space-x-2 text-white text-md">
+      <div className="flex flex-row items-center justify-center space-x-2 text-white text-md">
         <UilSun />
         <p className="text-center font-light">
           Rise {" "}
@@ -54,7 +56,7 @@ function TemperatureAndDetails({
         <UilSunset />
       </div>
 
-      <div className="flex flex-row items-center justify-center my-4 space-x-2 text-white text-md">
+      <div className="flex flex-row items-center justify-center space-x-2 text-white text-md">
       <UilTemperature size={18} className="mr-1" />
         <p className="text-center font-light">
           High {" "}
@@ -81,11 +83,11 @@ function TemperatureAndDetails({
       <UilTear size={18} className="mr-1" />
       </div>
 
-      <div className="flex flex-row items-center justify-center mb-2 space-x-2 text-white text-md">
+      <div className="flex flex-row items-center justify-center space-x-2 text-white text-md">
          
       </div>
 
-      <div className="flex flex-row items-center justify-center mb-2 space-x-2 text-white text-md">
+      <div className="flex flex-row items-center justify-center space-x-2 text-white text-md">
       <UilWind size={18} className="mr-1" />
             Wind
             <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span> 
