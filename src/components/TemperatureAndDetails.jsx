@@ -53,7 +53,7 @@ function TemperatureAndDetails({
         <UilSunset />
       </div>
 
-      <div className="flex flex-row items-center justify-center space-x-3 text-white text-md">
+      {/* <div className="flex flex-row items-center justify-center space-x-3 text-white text-md">
         <UilTemperature size={18} className="mr-1" />
         <p className="text-center font-light">
           High
@@ -66,13 +66,13 @@ function TemperatureAndDetails({
           <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
         </p>
         <UilTemperature size={18} className="mr-1" />
-      </div>
+      </div> */}
 
       <div className="flex flex-row items-center justify-center space-x-3 text-white text-md">
         <UilTemperature size={18} className="mr-1" />
         Real fell
         <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
-        <p className="text-center font-light">|</p>
+        <p className="text-center font-light"></p>
         <p className="text-center font-light"></p>
         Humidity
         <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>
