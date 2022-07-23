@@ -63,8 +63,8 @@ function App() {
               <p className="text-white text-center text-3xl font-medium">App</p>
               <img src={iconUrlFromCode('02d')} alt="" />
             </div>
-            <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
             <TopButtons setQuery={setQuery} />
+            <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
           </div>
         </Col>
       </Row>
