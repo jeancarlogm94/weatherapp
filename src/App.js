@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className="mx-auto">
+    <div className="mx-aut">
       {/* <div
         className={`mx-auto max-w-md my-3 pb-2 px-8 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-300  rounded-lg`}
       >
