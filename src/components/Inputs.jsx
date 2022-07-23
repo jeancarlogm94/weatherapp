@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
-import { toast } from "react-toastify";
+import React, { useState } from 'react';
+import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons';
+import { toast } from 'react-toastify';
 
 function Inputs({ setQuery, units, setUnits }) {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState('');
 
   const handleUnitsChange = (e) => {
     const selectedUnit = e.currentTarget.name;
@@ -11,14 +11,14 @@ function Inputs({ setQuery, units, setUnits }) {
   };
 
   const handleSearchClick = () => {
-    if (city !== "") setQuery({ q: city });
+    if (city !== '') setQuery({ q: city });
   };
 
   const handleLocationClick = () => {
     if (navigator.geolocation) {
-      toast.info("Fetching users location.");
+      toast.info('Fetching users location.');
       navigator.geolocation.getCurrentPosition((position) => {
-        toast.success("Location fetched!");
+        toast.success('Location fetched!');
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
 
@@ -51,19 +51,18 @@ function Inputs({ setQuery, units, setUnits }) {
           onClick={handleLocationClick}
         />
       </div>
-
-      <div className="flex flex-row w-1/4 items-center justify-center">
+      <div className="flex flex-row items-center justify-center mx-2">
         <button
           name="metric"
-          className="text-xl text-white font-light transition ease-out hover:scale-125"
+          className="text-xl mx-1 text-white font-light transition ease-out hover:scale-125"
           onClick={handleUnitsChange}
         >
           °C
         </button>
-        <p className="text-xl text-white mx-2">|</p>
+        {/* <p className="text-xl text-white mx-2">|</p> */}
         <button
           name="imperial"
-          className="text-xl text-white font-light transition ease-out hover:scale-125"
+          className="text-xl mx-1 text-white font-light transition ease-out hover:scale-125"
           onClick={handleUnitsChange}
         >
           °F
