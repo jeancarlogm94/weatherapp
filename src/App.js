@@ -79,7 +79,7 @@ function App() {
         )
       )} */}
 
-      <Row className="justify-content-md-center mx-4">
+      <Row className="justify-content-md-center">
         <Col md={8}>
           <div
             className={`mx-auto text-center my-3 pb-2 px-5 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit shadow-md shadow-gray-300  rounded-lg`}
@@ -97,7 +97,7 @@ function App() {
         </Col>
       </Row>
 
-      <Row className="justify-content-md-center mx-4">
+      <Row className="justify-content-md-center">
         <Col md={4}>
           <div>
             {loading ? (
@@ -139,7 +139,7 @@ function App() {
             ) : (
               weather && (
                 <div
-                  className={`my-2 py-1 px-8 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
+                  className={`my-2 py-1 px-5 bg-gradient-to-br  h-fit shadow-md shadow-gray-300 ${formatBackgroundCard()} rounded-lg`}
                 >
                   <Forecast title="hourly forecast" items={weather.hourly} />
                   <Forecast title="daily forecast" items={weather.daily} />
