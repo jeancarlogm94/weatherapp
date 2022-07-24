@@ -12,6 +12,7 @@ import getFormattedWeatherData, {
   iconUrlFromCode,
 } from './services/weatherService';
 import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 import { Row, Col } from 'react-bootstrap';
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
           setLoading(false);
         })
         .catch((error) =>
-          swal({
+          Swal.fire({
             title: '¡Sorry!',
             icon: 'error',
             text: 'No results found',
