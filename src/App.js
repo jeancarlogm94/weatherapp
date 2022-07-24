@@ -110,7 +110,7 @@ function App() {
                       className={`my-2 py-1 px-4 bg-gradient-to-br  h-fit ${formatBackgroundCard()} rounded-lg`}
                     >
                       <div className="flex items-center mt-3 justify-center">
-                        <p className="text-white text-4xl font-medium">
+                        <p className="text-white text-3xl font-medium">
                           Forecast
                         </p>
                       </div>

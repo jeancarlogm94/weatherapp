@@ -27,13 +27,13 @@ function TemperatureAndDetails({
     <div>
       <div className="flex flex-row items-center justify-center text-white">
         <p className="text-5xl">{`${temp.toFixed()}°`}</p>
-        <img src={iconUrlFromCode(icon)} alt="" className="w-30" />
+        <img src={iconUrlFromCode(icon)} alt="" className="w-25" />
       </div>
-      <div className="flex items-center justify-center  text-4xl text-white">
+      <div className="flex items-center justify-center  text-3xl text-white">
         <p>{details}</p>
       </div>
 
-      <div className="flex flex-row text-xl justify-center space-x-2 text-white text-md">
+      <div className="flex flex-row text-l justify-center space-x-2 text-white text-md">
         <UilSun />
         <p className="text-center font-light">
           Rise
@@ -68,7 +68,7 @@ function TemperatureAndDetails({
         <UilTemperature size={18} className="mr-1" />
       </div> */}
 
-      <div className="flex flex-row text-xl items-center justify-center mb-3 space-x-3 text-white text-md">
+      <div className="flex flex-row text-l items-center justify-center mb-3 space-x-3 text-white text-md">
         <UilTemperature size={18} className="mr-1" />
         Real fell
         <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
@@ -78,7 +78,7 @@ function TemperatureAndDetails({
         <UilTear size={18} className="mr-1" />
       </div>
 
-      <div className="flex text-xl flex-row items-center justify-center space-x-3 text-white text-md">
+      <div className="flex text-l flex-row items-center justify-center space-x-3 text-white text-md">
         <UilWind size={18} className="mr-1" />
         Wind
         <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>
