@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className="mx-aut">
+    <div className="container mx-auto">
       <Row className="justify-content-md-center">
         <Col md={8}>
           <div
