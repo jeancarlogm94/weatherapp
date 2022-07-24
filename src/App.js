@@ -61,7 +61,7 @@ function App() {
                 Weather
               </p>
               <p className="text-white text-center text-3xl font-medium">App</p>
-              <img src={iconUrlFromCode('02d')} alt="" />
+              <img className="w-30" src={iconUrlFromCode('02d')} alt="" />
             </div>
             <TopButtons setQuery={setQuery} />
             <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />

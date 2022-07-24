@@ -27,7 +27,7 @@ function TemperatureAndDetails({
     <div>
       <div className="flex flex-row items-center justify-center text-white">
         <p className="text-5xl">{`${temp.toFixed()}°`}</p>
-        <img src={iconUrlFromCode(icon)} alt="" className="w-25" />
+        <img src={iconUrlFromCode(icon)} alt="" className="w-30" />
       </div>
       <div className="flex items-center justify-center  text-3xl text-white">
         <p>{details}</p>
