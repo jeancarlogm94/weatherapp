@@ -11,7 +11,6 @@ import Loading from './components/Loading';
 import getFormattedWeatherData, {
   iconUrlFromCode,
 } from './services/weatherService';
-import swal from 'sweetalert';
 import Swal from 'sweetalert2';
 import { Row, Col } from 'react-bootstrap';
 
