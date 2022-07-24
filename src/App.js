@@ -11,7 +11,6 @@ import Loading from './components/Loading';
 import getFormattedWeatherData, {
   iconUrlFromCode,
 } from './services/weatherService';
-// import CityNotFound from './components/CityNotFound';
 import swal from 'sweetalert';
 import { Row, Col } from 'react-bootstrap';
 
@@ -52,7 +51,7 @@ function App() {
   return (
     <div className="container mx-auto">
       <Row className="justify-content-md-center">
-        <Col md={8}>
+        <Col md={10}>
           <div
             className={`mx-auto text-center mt-3 mb-2 pb-2 px-2 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit  rounded-lg`}
           >
@@ -75,7 +74,7 @@ function App() {
           weather && (
             <div>
               <Row className="justify-content-md-center">
-                <Col md={4}>
+                <Col md={5}>
                   <div>
                     <div
                       className={`my-2 py-4 bg-gradient-to-br ${formatBackgroundCard()} rounded-lg`}
@@ -104,7 +103,7 @@ function App() {
                     </div>
                   </div>
                 </Col>
-                <Col md={4}>
+                <Col md={5}>
                   <div>
                     <div
                       className={`my-2 py-1 px-4 bg-gradient-to-br  h-fit ${formatBackgroundCard()} rounded-lg`}
