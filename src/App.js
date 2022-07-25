@@ -42,10 +42,11 @@ function App() {
   }, [query, units]);
 
   const formatBackgroundCard = () => {
-    if (!weather) return 'from-cyan-500 to-blue-400';
-    const threshold = units === 'metric' ? 26 : 79;
-    if (weather.temp <= threshold) return 'from-cyan-500 to-blue-400';
-    return 'from-yellow-500 to-orange-500';
+    if (!weather) return 'from-cyan-500 to-blue-400 h-fit  rounded-lg';
+    const threshold = units === 'metric' ? 25 : 79;
+    if (weather.temp <= threshold)
+      return 'from-cyan-500 to-blue-400 h-fit  rounded-lg';
+    return 'from-yellow-500 to-orange-400 h-fit  rounded-lg';
   };
 
   return (
@@ -53,17 +54,28 @@ function App() {
       <Row className="justify-content-md-center">
         <Col md={10}>
           <div
-            className={`mx-auto text-center mt-3 mb-2 pb-2 px-2 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit  rounded-lg`}
+            className={`mx-auto text-center mt-3 py-2 px-3 bg-gradient-to-br from-cyan-500 to-blue-400 h-fit  rounded-lg`}
+            style={{ opacity: '0.8' }}
           >
-            <div className="flex flex-row items-center justify-center text-white">
-              <p className="text-white text-center text-4xl font-medium">
-                Weather
-              </p>
-              <p className="text-white text-center text-3xl font-medium">App</p>
-              <img className="w-30" src={iconUrlFromCode('02d')} alt="" />
+            <div
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                borderRadius: '10px',
+              }}
+              className={`my-2 pb-2 rounded-lg`}
+            >
+              <div className=" flex flex-row items-center justify-center text-white">
+                <p className="text-white text-center text-4xl font-medium">
+                  Weather
+                </p>
+                <p className="text-white text-center text-3xl font-medium">
+                  App
+                </p>
+                <img className="w-30" src={iconUrlFromCode('02d')} alt="" />
+              </div>
+              <TopButtons setQuery={setQuery} />
+              <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
             </div>
-            <TopButtons setQuery={setQuery} />
-            <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
           </div>
         </Col>
       </Row>
@@ -77,28 +89,41 @@ function App() {
                 <Col md={5}>
                   <div>
                     <div
-                      className={`my-2 py-4 bg-gradient-to-br ${formatBackgroundCard()} rounded-lg`}
+                      style={{
+                        backgroundImage: `url(${formatBackgroundCard()})`,
+                        backgroundSize: 'cover',
+                        opacity: '0.9',
+                      }}
+                      className={`my-2 p-3 bg-gradient-to-br ${formatBackgroundCard()} rounded-lg`}
                     >
-                      <TimeAndLocation weather={weather} />
+                      <div
+                        style={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                          borderRadius: '10px',
+                        }}
+                        className="py-4"
+                      >
+                        <TimeAndLocation weather={weather} />
 
-                      <TemperatureAndDetails weather={weather} />
-                      <div>
-                        <iframe
-                          className="mx-auto mt-3 rounded"
-                          title="map"
-                          src={`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15905.208849639464!2d${weather.lon}!3d${weather.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1658597844873!5m2!1ses!2sco`}
-                          width="600"
-                          height="450"
-                          style={{
-                            border: 0,
-                            width: 'auto',
-                            maxWidth: '250px',
-                            maxHeight: '250px',
-                          }}
-                          allowfullscreen=""
-                          loading="lazy"
-                          referrerpolicy="no-referrer-when-downgrade"
-                        ></iframe>
+                        <TemperatureAndDetails weather={weather} />
+                        <div>
+                          <iframe
+                            className="mx-auto mt-3 rounded"
+                            title="map"
+                            src={`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15905.208849639464!2d${weather.lon}!3d${weather.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1658597844873!5m2!1ses!2sco`}
+                            width="600"
+                            height="450"
+                            style={{
+                              border: 0,
+                              width: 'auto',
+                              maxWidth: '250px',
+                              maxHeight: '250px',
+                            }}
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                          ></iframe>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -106,18 +131,34 @@ function App() {
                 <Col md={5}>
                   <div>
                     <div
-                      className={`my-2 py-1 px-4 bg-gradient-to-br  h-fit ${formatBackgroundCard()} rounded-lg`}
+                      style={{
+                        backgroundImage: `url(${formatBackgroundCard()})`,
+                        backgroundSize: 'cover',
+                        opacity: '0.9',
+                      }}
+                      className={`my-2 p-3 bg-gradient-to-br ${formatBackgroundCard()} rounded-lg`}
                     >
-                      <div className="flex items-center mt-3 justify-center">
-                        <p className="text-white text-3xl font-medium">
-                          Forecast
-                        </p>
+                      <div
+                        style={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                          borderRadius: '10px',
+                        }}
+                        className="py-3"
+                      >
+                        <div className="flex items-center mt-2 justify-center">
+                          <p className="text-white text-3xl font-medium">
+                            Forecast
+                          </p>
+                        </div>
+                        <Forecast
+                          title="hourly forecast"
+                          items={weather.hourly}
+                        />
+                        <Forecast
+                          title="daily forecast"
+                          items={weather.daily}
+                        />
                       </div>
-                      <Forecast
-                        title="hourly forecast"
-                        items={weather.hourly}
-                      />
-                      <Forecast title="daily forecast" items={weather.daily} />
                     </div>
                   </div>
                 </Col>
